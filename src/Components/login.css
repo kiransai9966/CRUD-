@@ -1,0 +1,92 @@
+#authBlock article {
+  width: 100%;
+  height: 230vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px 0;
+}
+.authContext {
+  text-align: center;
+}
+#authBlock article svg {
+  fill: #111;
+  width: 140px;
+}
+.authContext h1 {
+  font-size: 27px;
+  font-weight: bold;
+  padding: 30px 0;
+}
+.authContext button {
+  background: #1877f2;
+  padding: 14px 32px;
+  border-radius: 500px;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+.orBlock {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  width: 80%;
+  margin: 12px auto;
+  position: relative;
+}
+.orBlock strong {
+  top: 0px;
+  padding: 10px;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  left: 44%;
+  z-index: 111;
+  background: #fff;
+  color: #999;
+  text-transform: lowercase;
+}
+.formContent {
+  width: 470px;
+  margin: 0 auto;
+}
+.formContent h2 {
+  font-size: 17px;
+  padding: 20px 0;
+  color: #000;
+}
+.formContent label {
+  width: 100%;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+.formContent input[type="text"],
+.formContent input[type="email"],
+.formContent input[type="password"] {
+  width: 100%;
+  height: 50px;
+  display: block;
+  border-radius: 3px;
+  border: 1px solid #999;
+  padding: 0 10px;
+  margin-bottom: 15px;
+}
+.dateBlock {
+  display: flex;
+  justify-content: space-between;
+}
+.dateBlock input:nth-child(1) {
+  flex-basis: 40%;
+}
+.dateBlock input:nth-child(2) {
+  flex-basis: 20%;
+}
+.dateBlock input:nth-child(3) {
+  flex-basis: 30%;
+}
