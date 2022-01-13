@@ -6,7 +6,6 @@
 body {
   background-color: #efefef;
 }
-
 .homeTable {
   display: flex;
   justify-content: center;
@@ -61,11 +60,11 @@ th {
 #form {
   padding: 50px;
   margin-top: 50px;
-  width: 100%;
+  width: 250%;
   height: 500px;
   background-color: #fff;
   border: 1px solid white;
-  border-radius: 5px;
+  border-radius: 15px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -128,4 +127,10 @@ th {
 }
 .cancel > a:hover {
   color: #fff;
+}
+.popup {
+  position: absolute;
+  margin-top: 340px;
+  margin-left: 130px;
+  transform: 5s;
 }

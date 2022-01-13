@@ -3,12 +3,19 @@ import "./component.css";
 import { ContextApi } from "./../contextapi/ContextApi";
 import { Link } from "react-router-dom";
 import { AiOutlinePlusCircle } from "react-icons/ai";
+import Create from "./Create";
 const Home = () => {
   let contextData = useContext(ContextApi);
-  let { data } = contextData;
+  let { data, handlePopup, popup } = contextData;
   return (
     <div className="homeTable">
       <h1>Employee Details</h1>
+      <div
+        style={popup ? { display: "block" } : { display: "none" }}
+        className="popup"
+      >
+        <Create />
+      </div>
       <table>
         <thead>
           <tr>
@@ -17,10 +24,8 @@ const Home = () => {
             <th>Working Since</th>
             <th>Working Til</th>
             <th>City</th>
-            <th>
-              <Link to="/create">
-                <AiOutlinePlusCircle style={{ fontSize: "30px" }} />
-              </Link>
+            <th onClick={handlePopup}>
+              <AiOutlinePlusCircle style={{ fontSize: "30px" }} />
             </th>
           </tr>
         </thead>

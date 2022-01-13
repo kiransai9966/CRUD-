@@ -13,7 +13,7 @@ const Create = () => {
     city: "",
   });
   let { designation, company, workingsince, workingtil, city } = state;
-
+  let data = [];
   let handleChange = e => {
     let { name, value } = e.target;
     setState({ ...state, [name]: value });
@@ -21,9 +21,8 @@ const Create = () => {
   let handleSubmit = e => {
     e.preventDefault();
     contextData.handleAddData(state);
-    navigate("/");
+    setState(data);
   };
-
   return (
     <section id="createBlock">
       <article>
@@ -57,7 +56,7 @@ const Create = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="formBlock" style={{ marginLeft: "105px" }}>
+            <div className="formBlock" style={{ marginLeft: "10px" }}>
               <label>Working Til</label>
               <input
                 type="text"
@@ -88,8 +87,8 @@ const Create = () => {
             <div style={{ flexBasis: "50%" }}>
               <button>Submit</button>
             </div>
-            <div className="cancel">
-              <Link to="/">Cancel</Link>
+            <div className="cancel" onClick={contextData.handlePopup}>
+              Cancel
             </div>
           </div>
         </form>
