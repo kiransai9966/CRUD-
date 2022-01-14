@@ -15,8 +15,14 @@ let ContextProvider = ({ children }) => {
   let handlePopup = () => {
     setPopup(!popup);
   };
+  let handleDelete = deletedata => {
+    let userData = data.filter(d => d.company !== deletedata);
+    setData(userData);
+  };
   return (
-    <ContextApi.Provider value={{ data, handleAddData, handlePopup, popup }}>
+    <ContextApi.Provider
+      value={{ data, handleAddData, handlePopup, popup, handleDelete }}
+    >
       {children}
     </ContextApi.Provider>
   );

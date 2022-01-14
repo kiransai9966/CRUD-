@@ -40,7 +40,14 @@ const Home = () => {
                 <td>{details.city}</td>
                 <td className="buttons">
                   <button className="editBtn">Edit</button>
-                  <button className="deleteBtn">Delete</button>
+                  <button
+                    className="deleteBtn"
+                    onClick={() => {
+                      contextData.handleDelete(details.company);
+                    }}
+                  > 
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))}
